@@ -1,7 +1,11 @@
 <h1>Lists</h1>
 <ul>
   <% @lists.each do |list| %>
-  <li><%= link_to list.name, list_path(list) %> <%= link_to 'Delete this list', list_path(list), data: {turbo_method: :delete, turbo_confirm: 'Are you sure ?'}%></li>
+    <li>
+      <%= image_tag 'app\assets\images\Mitaka16__realistic_french_flag_ona_pirate_ship_mast_in_ocean_54c4cff7-38f8-4220-8dff-937e4b28543f.png', height: 300 %>
+      <%= link_to list.name, list_path(list) %>
+      <%= link_to 'Delete this list', list_path(list), data: {turbo_method: :delete, turbo_confirm: 'Are you sure ?'}%>
+    </li>
   <% end %>
 </ul>
 
